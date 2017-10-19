@@ -1,0 +1,106 @@
+<DOCTYPE!>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>Contact page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+	  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+	  <script src="assets/js/modernizr.custom.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<!-- <?php
+  include('connect.php');
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+  $from = 'From: ';
+  $to = 'mohd.jafar@siu.edu';
+
+  $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+      if (mail ($to, $subject, $body, $from)) {
+          echo '<p>Your message has been sent!</p>';
+      } else {
+          echo '<p>Something went wrong, go back and try again!</p>';
+      }
+  }
+  ?> -->
+      <h1><center>Contact Us</center></h1>
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Calendar Organizer</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="calendar.html" class="smoothScroll">Calendar</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#contact.html" class="smoothScroll">Contact</a>
+      <a href="#login" class="smoothScroll">Log in</a>
+      <a href="#signup" class="smoothScroll">Sign Up</a>
+		</div>
+
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+	<!-- contact form -->
+  <div class="col-md-9 col-sm-12 col-xs-12">
+  <div class="page-content">
+    <!-- here u need to change the link to your email address to serve as the reciever -->
+    <form id="cantact-form" action= "https://formspree.io/mohd.jafar@siu.edu" method="POST" novalidate autocomplete="off" class="idealforms">
+
+      <div class="field">
+          <label for="name">Name:</label>
+          <input name="name" type="text" placeholder="Name" required>
+          <span class="error"></span>
+      </div>
+      <div class="field">
+          <label for="email">Email:</label>
+          <input name="email" type="email" placeholder="Email address" required>
+          <span class="error"></span>
+      </div>
+      <div class="field">
+          <label for="Subject">Subject:</label>
+          <input  name="Subject" type="text"  placeholder="What's Up" >
+          <span class="error"></span>
+      </div>
+      <div class="full-fild">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="5" placeholder="Message" rows="4"></textarea>
+      </div>
+      <div class="field buttons">
+      <button type="submit" class="btn btn-lg blue-color">Submit</button>
+  </div>
+   <span id="invalid"></span>
+
+  <aside id="sidebar" class="main-sidebar">
+        <h2> Send your feedback and dont forget to follow the fun on social media</h2>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/SouthernIllinoisUniversityCarbondale/"> facebook</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/SIUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+          </li>
+ </aside>
+</form>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/classie.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/smoothscroll.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
