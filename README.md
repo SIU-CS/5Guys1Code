@@ -1,5 +1,5 @@
 # 5Guys1Code
-A Calendar/Organization Web Application Using HTML/CSS, Bootstrap, JQuery, Reactjs (Front-End) and PHP (Back-end)
+A Calendar/Organization Web Application Using HTML/CSS, Bootstrap, JQuery(Front-End) and PHP (Back-end)
 
 Members <br>
 ————————————————— <br>
