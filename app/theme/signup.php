@@ -1,23 +1,18 @@
 <?php
-  include('registration.php');
-  $email = mysqli_real_escape_string($bd,$_POST['email']);
-  $stud_id = mysqli_real_escape_string($bd,$_POST['stud_id']);
-  $password = mysqli_real_escape_string($bd,$_POST['pass']);
-  $bd = "SELECT email FROM users WHERE email='".$email."'";
-  $result = mysqli_query($bd,$query);
-  $numResults = mysqli_num_rows($result);
+  $db = mysqli_connect('dbserv.cs.siu.edu','jhowell','password','jhowell')
+  or die('Error connecting to MySQL server.');
   
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) // Validate email address
-    {
-    	$message =  "Invalid email address please type a valid email!!";
-    }
-  elseif($numResults>=1)
-    {
-    	$message = $email." Email already exist!!";
-    }
-  else
-	{
-    	mysqli_query("INSERT INTO users (email,stud_id,password) VALUES ('".$email."','".$stud_id."','".md5($password)."')");
-    	$message = "Signup Sucessfully!!";
-    }
+  $email = mysqli_real_escape_string($db,$_POST['email']);
+  $stud_id = mysqli_real_escape_string($db,$_POST['stud_id']);
+  $password = mysqli_real_escape_string($db,$_POST['pass']);
+  
+	$sql= "INSERT INTO registered_users (email, stud_id, password) VALUES ('".$email."', '".$stud_id."', MD5('".$password."'))";
+    if(mysqli_query($db, $sql)){
+		echo "Records added successfully.";
+	}
+ 	else{
+		echo "ERROR: There was an issue signing you up. $sql. " . mysqli_error($db);
+		}
+		
+	mysqli_close($db);
 ?>
