@@ -1,20 +1,16 @@
-// Assignment 3 Connect
-//Mohammed Abdulkadir
-
 <?php
-class Connect
-{
-  public function connectToServer($serverName=null)
+
+$mysql_hostname = "dbserv.cs.siu.edu";
+$mysql_user = "mabdulkadir";
+$mysql_password = " ";
+$mysql_database = " ";
+
+
+$bd = mysqli_connect("$mysql_hostname", "$mysql_user", "$mysql_password", "$mysql_database");
+
+// Check connection
+if (mysqli_connect_errno())
   {
-    if($serverName==null){
-      throw Exception('wrong server name!');
-    }
-    $fp = fsockopen($serverName,50);
-    return ($fp) ? true : false;
+  die ("Failed to connect to MySQL: " . mysqli_connect_error());
   }
-  public function returnSampleObject()
-  {
-    return $this;
-  }
-}
 ?>
