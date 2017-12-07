@@ -1,8 +1,8 @@
 <?php
   $mysql_hostname = "dbserv.cs.siu.edu";
-  $mysql_user = ""; // enter your username
-  $mysql_password = " "; //enter your password here
-  $mysql_database = " "; //enter your db name same as password
+  $mysql_user = "chanusiak"; // enter your usernames
+  $mysql_password = "pGjGg7ME"; //enter your password here
+  $mysql_database = "chanusiak"; //enter your db name same as password
 
 
   $conn = mysqli_connect("$mysql_hostname", "$mysql_user", "$mysql_password", "$mysql_database");
