@@ -1,5 +1,5 @@
 <?php
-  $db = mysqli_connect('dbserv.cs.siu.edu','jhowell','password','jhowell')
+  $db = mysqli_connect('dbserv.cs.siu.edu','jhowell','Gb1l5ILW','jhowell')
   or die('Error connecting to MySQL server.');
   
   $email = mysqli_real_escape_string($db,$_POST['email']);
@@ -7,12 +7,8 @@
   $password = mysqli_real_escape_string($db,$_POST['pass']);
   
 	$sql= "INSERT INTO registered_users (email, stud_id, password) VALUES ('".$email."', '".$stud_id."', MD5('".$password."'))";
-    if(mysqli_query($db, $sql)){
-		echo "Records added successfully.";
-	}
- 	else{
-		echo "ERROR: There was an issue signing you up. $sql. " . mysqli_error($db);
-		}
-		
+    mysqli_query($db, $sql);
 	mysqli_close($db);
+	
+	header("Location: http://www2.cs.siu.edu/~jhowell/calendar.html");
 ?>
