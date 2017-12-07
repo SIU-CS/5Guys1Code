@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="Tests/bootstrap.php" colors="true">
+    <php>
+        <var name="mabdulkadir" value="mysql:dbser.siu.edu=add_Test;host=dbserv.siu.edu"/>
+        <var name="mabdulkadir" value="root"/>
+        <var name=" " value=""/>
+    </php>
+
+    <testsuites>
+        <testsuite name="add Test Suite">
+            <directory>./Tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <exclude>
+                <directory>./Tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
+
+script: phpunit --configuration phpunit_$DB.xml --coverage-text
+//add this yml file
