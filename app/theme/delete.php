@@ -1,11 +1,8 @@
 <?php
-include("connect.php");
-
-//getting id of the data from url
-$id = $_GET['id'];
-
-//deleting the row from table
-$bd = mysqli_query($mysqli, "DELETE FROM items WHERE id=$id");
-
+session_start();
+include('connect.php');
+$name = $_GET['name'];
+mysqli_query($bd, "DELETE FROM items WHERE name = '$name' ");
 header("location: toDo.php?remarks=success");
+mysqli_close($bd);
 ?>
