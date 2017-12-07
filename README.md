@@ -21,3 +21,8 @@ dawgtag: SIU851345679 <br>
 Name: Khye Heuerman <br>
 email: khye@siu.edu <br>
 dawgtag: SIU851941706 <br>
+
+————————————————— <br>
+Name: Chris Hanusiak <br>
+email: chanusiak1@siu.edu <br>
+dawgtag: SIU851474260 <br>
