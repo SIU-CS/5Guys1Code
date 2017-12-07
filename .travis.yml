@@ -45,9 +45,7 @@ env:
 # before script run a test 
 before script: 
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS registered_users_test;" -uroot; fi
-
-script: 
-phpunit --configuration phpunit_$DB.xml --coverage-text
+  
 script: 
 sudo -E su $USER -c 'COMMAND1; COMMAND2; COMMAND3'
 
