@@ -1,5 +1,5 @@
 <?php
-  $db = mysqli_connect('dbserv.cs.siu.edu','jhowell','Gb1l5ILW','jhowell')
+  $db = mysqli_connect('dbserv.cs.siu.edu','jhowell','password','jhowell')
   or die('Error connecting to MySQL server.');
   
   $email = mysqli_real_escape_string($db,$_POST['email']);
